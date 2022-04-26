@@ -41,7 +41,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/tests/**'],
+      files: ['**/tests/**', '.eslintrc.js', 'jest.config.js'],
       extends: [
         'plugin:jest/recommended',
       ],

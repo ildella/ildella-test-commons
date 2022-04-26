@@ -1,0 +1,17 @@
+node_modules
+**/**yarn-error.log
+
+coverage/
+cpd.report
+
+.DS_Store
+*.env
+
+.build
+.idea
+dist/
+
+.serverless
+.terraform
+
+.kinesis-db

@@ -1,0 +1,104 @@
+# See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+
+orbs:
+  # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
+  node: circleci/node@5.0.2
+  slack: circleci/slack@3.4.2
+
+jobs:
+  lint:
+    # These next lines define a Docker executor: https://circleci.com/docs/2.0/executor-types/
+    # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/node
+    docker:
+      - image: cimg/node:14.19
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn lint
+  audit:
+    docker:
+      - image: cimg/node:14.19
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn audit --groups dependencies
+  tests:  
+    docker:
+      - image: cimg/node:14.19
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn 
+      - run:
+          name: Run tests
+          command: yarn test.ci
+  coverage:  
+    docker:
+      - image: cimg/node:14.19
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn 
+      - run:
+          name: Run tests with coverage
+          command: yarn test.ci --coverage
+  publish:
+    docker:
+      - image: cimg/node:14.19
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - add_ssh_keys:
+          fingerprints:
+            - "......." 
+      - run:
+          name: Authenticate with NPM Registry  
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/project/.npmrc
+      - run:
+          name: Publish to NPM  
+          command: yarn publish
+      - slack/status:
+          fail_only: true                
+workflows:
+  # Configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
+  check-and-build: 
+    jobs:
+      - lint
+      # - audit
+      - tests
+      # - tests:
+          # context: AWS
+      - coverage:
+          # context: AWS
+          requires:
+           - tests
+      - publish:
+          # context: AWS
+          requires:
+           - lint
+           # - audit
+           - tests
+           # - coverage
+          filters:
+            branches:
+              only: master
+
+## Advanced workflow - NodeJS version matrix
+
+# workflows:
+#   sample:
+#     jobs:
+#       - node/test:
+#           matrix:
+#             parameters:
+#               version: ['15.1', 'lts', '12.21']
+#           # For more information about matrix testing see the detailed blog post:
+#           # https://circleci.com/blog/circleci-matrix-jobs/
+#           # or the configuration reference:
+#           # https://circleci.com/docs/2.0/configuration-reference/?section=reference#matrix-requires-version-21

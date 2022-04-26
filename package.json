@@ -1,0 +1,58 @@
+{
+  "name": "ildella-test-commons",
+  "version": "0.2.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ildella/ildella-test-commons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ildella/ildella-test-commons/issues"
+  },
+  "homepage": "https://github.com/ildella/ildella-test-commons#readme",
+  "main": "src/index",
+  "scripts": {
+    "ci.validate": "circleci config validate",
+    "ci.process": "circleci config process .circleci/config.yml > process.yml",
+    "ci.execute": "circleci local execute --job test",
+    "cloc": "find src -name '*.js' | xargs wc -l",
+    "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --failOnViolation false > cpd.report",
+    "depcheck": "depcheck",
+    "lint": "eslint . --max-warnings 3",
+    "lint.print": "eslint --print-config src/config.js >> eslint-config.js",
+    "test": "jest",
+    "test.ci": "jest --ci",
+    "test.coverage": "jest --coverage",
+    "test.watch": "jest --watch"
+  },
+  "dependencies": {
+    "aws-sdk": "2.1121.0",
+    "axios": "0.27.1",
+    "dayjs": "1.11.1",
+    "depcheck": "1.4.3",
+    "eslint": "8.14.0",
+    "eslint-config-node-opinionated": "0.5.1",
+    "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-jest": "26.1.5",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-security": "1.5.0",
+    "eslint-plugin-sonarjs": "0.13.0",
+    "eslint-plugin-unicorn": "42.0.0",
+    "jest": "28.0.1",
+    "jest-dynalite": "3.4.4",
+    "kinesalite": "3.3.3",
+    "highland": "2.13.5",
+    "mongodb": "4.5.0",
+    "mongodb-memory-server-core": "8.5.1",
+    "node-notifier": "10.0.1",
+    "tracer": "1.1.5"
+  },
+  "devDependencies": {
+    "fastify": "3.28.0",
+    "find-versions-cli": "4.0.0"
+  }
+}

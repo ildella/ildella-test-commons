@@ -1,6 +1,6 @@
 {
   "name": "ildella-test-commons",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "engines": {
     "node": ">=12.10"
@@ -8,6 +8,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ildella/ildella-test-commons.git"
+  },
+  "author": {
+    "name": "Daniele Dellafiore",
+    "email": "daniele@dellafiore.net"
   },
   "bugs": {
     "url": "https://github.com/ildella/ildella-test-commons/issues"

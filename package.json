@@ -46,14 +46,15 @@
     "eslint-plugin-security": "1.5.0",
     "eslint-plugin-sonarjs": "0.13.0",
     "eslint-plugin-unicorn": "42.0.0",
+    "highland": "2.13.5",
     "jest": "28.0.1",
     "jest-dynalite": "3.4.4",
     "kinesalite": "3.3.3",
-    "highland": "2.13.5",
     "mongodb": "4.5.0",
     "mongodb-memory-server-core": "8.5.1",
     "node-notifier": "10.0.1",
-    "tracer": "1.1.5"
+    "tracer": "1.1.5",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
     "fastify": "3.28.0",

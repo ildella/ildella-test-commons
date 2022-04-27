@@ -1,13 +1,13 @@
-const logger = require('./commons/logger')
-const dayjs = require('./commons/dayjs')
 const aws = require('./aws')
+const commons = require('./commons')
 const eslintConfigs = require('./eslint')
+const http = require('./http')
 const jestCommons = require('./jest')
 
 module.exports = {
   aws,
-  dayjs,
-  logger,
-  jestCommons,
+  commons,
   eslintConfigs,
+  http,
+  jestCommons,
 }

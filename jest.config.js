@@ -10,7 +10,7 @@ module.exports = {
   projects: [
     '<rootDir>/tests/dynamodb',
     '<rootDir>/tests/s3',
-    // '<rootDir>/tests/kinesis',
+    // '<rootDir>/tests/kinesis', // not working in CI
     '<rootDir>/tests/http',
     // '<rootDir>/tests/mongodb', // wait for mongodb 5.0 to work in Ubuntu 22.04
   ],

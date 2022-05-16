@@ -21,7 +21,7 @@ const batchWrite = ({TableName, batch, parallel = 1}) => __.pipeline(
   __.map(defaultDocumentClient.wrapBatchWriteRequest(TableName)),
   __.map(batch => defaultDocumentClient.batchWrite(batch)),
   __.map(__),
-  __.parallel(parallel), // TODO fix lint rules, we want a comma here.
+  __.parallel(parallel) // TODO fix lint rules, we want a comma here.
 )
 
 /*

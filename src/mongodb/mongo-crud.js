@@ -4,8 +4,8 @@ module.exports = coll => {
     const results = await coll.find({id: id}, {}).toArray()
     return results[0]
   }
-  const update = async doc => {
-    const result = await coll.updateOne({id: doc.id}, {$set: doc})
+  const update = async document => {
+    const result = await coll.updateOne({id: document.id}, {$set: document})
     return result.result
   }
   const list = () => coll.find({}, {}).skip(0).limit(20).sort({id: -1}).toArray()

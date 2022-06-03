@@ -47,17 +47,21 @@
     "eslint-plugin-sonarjs": "0.13.0",
     "eslint-plugin-unicorn": "42.0.0",
     "highland": "2.13.5",
+    "ioredis": "5.0.6",
     "jest": "28.1.0",
     "jest-dynalite": "3.5.1",
+    "kafkajs": "2.0.2",
     "kinesalite": "3.3.3",
     "mongodb": "4.6.0",
     "mongodb-memory-server-core": "8.6.0",
     "node-notifier": "10.0.1",
+    "redis": "4.1.0",
     "tracer": "1.1.5",
     "uuid": "8.3.2"
   },
   "devDependencies": {
     "fastify": "3.29.0",
-    "find-versions-cli": "4.0.0"
+    "find-versions-cli": "4.0.0",
+    "redis-mock": "0.56.3"
   }
 }

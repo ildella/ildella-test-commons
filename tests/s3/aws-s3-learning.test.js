@@ -41,7 +41,9 @@ test.skip('upload a string', async () => {
     Body: 'content of the file',
     // StorageClass: 'REDUCED_REDUNDANCY'
   })
-  const {Location, ETag, ServerSideEncryption, key} = data
+  const {
+    Location, ETag, ServerSideEncryption, key,
+  } = data
   expect(Location).toContain(Key)
   expect(key).toBe(Key)
   expect(ServerSideEncryption).toBe('AES256')
@@ -70,7 +72,13 @@ test.skip('upload a file and get signed link', async () => {
   expect(Location).toBe(`.s3.amazonaws.com/${Key}`)
   console.log(Key)
 
-  const params = {Bucket, Key, Expires, ResponseContentDisposition, ResponseContentType}
+  const params = {
+    Bucket,
+    Key,
+    Expires,
+    ResponseContentDisposition,
+    ResponseContentType,
+  }
   const signedUrl = await getSignedUrl('getObject', params)
   expect(signedUrl).toContain('.s3.amazonaws.com/')
   expect(signedUrl).toContain('&response-content-disposition=attachment&response-content-type=application%2Fpdf')
@@ -78,7 +86,13 @@ test.skip('upload a file and get signed link', async () => {
 
 test.skip('sign existing upload', async () => {
   const Key = '0e5cf485-8bbf-47d5-b12e-3aa78fab69dc'
-  const params = {Bucket, Key, Expires, ResponseContentDisposition, ResponseContentType}
+  const params = {
+    Bucket,
+    Key,
+    Expires,
+    ResponseContentDisposition,
+    ResponseContentType,
+  }
   const signedUrl = await getSignedUrl('getObject', params)
   expect(signedUrl).toContain('.s3.amazonaws.com/')
   expect(signedUrl).toContain('&response-content-disposition=attachment&response-content-type=application%2Fpdf')

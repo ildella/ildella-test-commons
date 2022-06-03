@@ -8,6 +8,4 @@ const dynaliteOptions = {
   sslEnabled: false,
   // region: 'localhost',
 }
-AWS.config.update({
-  ...dynaliteOptions,
-})
+AWS.config.update({...dynaliteOptions})

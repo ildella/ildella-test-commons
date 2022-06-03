@@ -1,7 +1,6 @@
 module.exports = coll => {
-
   const read = async id => {
-    const results = await coll.find({id: id}, {}).toArray()
+    const results = await coll.find({id}, {}).toArray()
     return results[0]
   }
   const update = async document => {
@@ -16,5 +15,4 @@ module.exports = coll => {
     update,
     list,
   }
-
 }

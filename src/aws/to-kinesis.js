@@ -15,6 +15,4 @@ const sendToStream = ({
     __.flatMap(__)
   )
 
-module.exports = {
-  sendToStream,
-}
+module.exports = {sendToStream}

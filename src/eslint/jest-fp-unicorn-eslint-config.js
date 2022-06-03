@@ -20,9 +20,9 @@ module.exports = {
         'fp/no-nil': 'off',
         'fp/no-rest-parameters': 'off',
         'fp/no-mutation': ['error', {
-          'commonjs': true,
-          'allowThis': true,
-          'exceptions': [],
+          commonjs: true,
+          allowThis: true,
+          exceptions: [],
         }],
         'max-lines': ['warn', 100],
         'no-console': 'warn',

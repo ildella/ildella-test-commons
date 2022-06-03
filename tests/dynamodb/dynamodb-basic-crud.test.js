@@ -18,9 +18,16 @@ test('write / read basic info', async () => {
     entityId,
     value,
   }
-  await defaultDocumentClient.put({TableName, Item})
+  await defaultDocumentClient.put({
+    TableName,
+    Item,
+  })
   const response = await defaultDocumentClient.get({
-    TableName, Key: {entityId, value},
+    TableName,
+    Key: {
+      entityId,
+      value,
+    },
   })
   expect(response).toEqual({
     Item: {

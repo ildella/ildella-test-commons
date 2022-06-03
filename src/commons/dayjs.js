@@ -5,6 +5,4 @@ const utc = require('dayjs/plugin/utc')
 dayjs.extend(utc)
 // dayjs.extend(timezone)
 
-module.exports = {
-  dayjs,
-}
+module.exports = {dayjs}

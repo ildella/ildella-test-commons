@@ -1,6 +1,8 @@
 const mongoTestBase = require('../../src/mongodb/mongo-test-base')
 
-const {start, stop, client, connection} = mongoTestBase()
+const {
+  start, stop, client, connection,
+} = mongoTestBase()
 beforeAll(start)
 afterAll(stop)
 
@@ -19,7 +21,6 @@ test('should successfully set & get information from the database', async () => 
 })
 
 test('same, but with connection from the test base module', async () => {
-
   const currentConnection = await connection()
   const database = currentConnection.db('dd-test-db')
   expect(database).toBeDefined()
@@ -28,5 +29,4 @@ test('same, but with connection from the test base module', async () => {
   const result = await testCollection.insertMany([{a: 1}, {b: 1}])
   expect(result.insertedCount).toStrictEqual(2)
   expect(await testCollection.countDocuments({})).toBe(2)
-
 })

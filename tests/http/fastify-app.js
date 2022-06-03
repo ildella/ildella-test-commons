@@ -10,12 +10,8 @@ const onRequest = (request, reply, next) => {
   next()
 }
 
-module.exports = ({
-  logLevel = 'debug',
-} = {}) => {
-  const instance = fastify( {
-    logger: {level: logLevel || 'warn'},
-  })
+module.exports = ({logLevel = 'debug'} = {}) => {
+  const instance = fastify({logger: {level: logLevel || 'warn'}})
   instance.addHook('onRequest', onRequest)
   return instance
 }

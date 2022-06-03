@@ -8,7 +8,10 @@ const get = async Name => {
 }
 
 const put = (Name, Value) => new SSM().putParameter({
-  Name, Value, Overwrite: true, Type: 'String',
+  Name,
+  Value,
+  Overwrite: true,
+  Type: 'String',
 }).promise()
 
 module.exports = {

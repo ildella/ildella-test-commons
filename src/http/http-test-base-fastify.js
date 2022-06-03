@@ -7,9 +7,7 @@ module.exports = app => ({
     const {address, port} = app.server.address()
     return axios.create({
       baseURL: `http://${address}:${port}`,
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: {'Content-Type': 'application/json'},
     })
   },
 })

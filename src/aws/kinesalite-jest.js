@@ -3,9 +3,7 @@ const {Kinesis} = require('aws-sdk')
 const kinesalite = require('kinesalite')
 
 const {curry} = __
-const kinesaliteServer = kinesalite({
-  createStreamMs: 5,
-})
+const kinesaliteServer = kinesalite({createStreamMs: 5})
 
 const kinesis = port => new Kinesis({endpoint: `http://localhost:${port}`})
 
@@ -18,7 +16,10 @@ const startServer = ({port}, done) => {
 }
 
 const createStream = ({StreamName, port}, done) => {
-  kinesis(port).createStream({StreamName, ShardCount: 1}, (error, data) => {
+  kinesis(port).createStream({
+    StreamName,
+    ShardCount: 1,
+  }, (error, data) => {
     if (error) return done(error)
     // console.log(`Stream ${StreamName} created -->`, data)
     done()
@@ -29,7 +30,10 @@ const closeAndTerminate = ({StreamName, port}, done) => {
   // console.log('iniziate termination...')
   __([StreamName])
     .map(StreamName =>
-      kinesis(port).deleteStream({StreamName, EnforceConsumerDeletion: true}).promise()
+      kinesis(port).deleteStream({
+        StreamName,
+        EnforceConsumerDeletion: true,
+      }).promise()
     )
     .flatMap(__)
     .done(() => {
@@ -41,13 +45,17 @@ const closeAndTerminate = ({StreamName, port}, done) => {
     })
 }
 
-const write = ({StreamName, PartitionKey, port}, payload) => kinesis(port).putRecord({
+const write = ({
+  StreamName, PartitionKey, port,
+}, payload) => kinesis(port).putRecord({
   StreamName,
   PartitionKey,
   Data: JSON.stringify(payload),
 }).promise()
 
-const read = async ({StreamName, ShardId, SequenceNumber, port}) => {
+const read = async ({
+  StreamName, ShardId, SequenceNumber, port,
+}) => {
   const {ShardIterator} = await kinesis(port).getShardIterator({
     StreamName,
     ShardId,
@@ -62,7 +70,9 @@ const read = async ({StreamName, ShardId, SequenceNumber, port}) => {
   return Records
 }
 
-const writeRead = async ({StreamName, PartitionKey, port}, payload) => {
+const writeRead = async ({
+  StreamName, PartitionKey, port,
+}, payload) => {
   const response = await kinesis(port).putRecord({
     StreamName,
     PartitionKey,

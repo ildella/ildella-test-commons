@@ -1,6 +1,4 @@
-const {
-  all,
-} = require('./tables')
+const {all} = require('./tables')
 
 module.exports = {
   // tables: async () => { ... } // async is also working here

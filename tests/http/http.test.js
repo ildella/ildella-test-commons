@@ -6,7 +6,9 @@ const fastifyApp = require('./fastify-app')
 const httpTest = httpTestBase({framework: 'fastify'})
 const app = routes(fastifyApp())
 
-const {start, stop, client} = httpTest(app)
+const {
+  start, stop, client,
+} = httpTest(app)
 
 beforeAll(start)
 afterAll(stop)

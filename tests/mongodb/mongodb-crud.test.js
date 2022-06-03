@@ -1,6 +1,8 @@
 const mongoTestBase = require('../../src/mongodb/mongo-test-base')
 
-const {start, stop, client, connection} = mongoTestBase()
+const {
+  start, stop, client, connection,
+} = mongoTestBase()
 beforeAll(start)
 afterAll(stop)
 

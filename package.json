@@ -1,6 +1,6 @@
 {
   "name": "ildella-test-commons",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "license": "MIT",
   "engines": {
     "node": ">=12.10"
@@ -33,14 +33,14 @@
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "aws-sdk": "2.1135.0",
+    "aws-sdk": "2.1148.0",
     "axios": "0.27.2",
     "dayjs": "1.11.2",
     "depcheck": "1.4.3",
-    "eslint": "8.15.0",
-    "eslint-config-node-opinionated": "0.5.1",
+    "eslint": "8.16.0",
+    "eslint-config-node-opinionated": "0.6.0",
     "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-jest": "26.2.2",
+    "eslint-plugin-jest": "26.4.6",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-security": "1.5.0",
@@ -51,7 +51,7 @@
     "jest-dynalite": "3.5.1",
     "kinesalite": "3.3.3",
     "mongodb": "4.6.0",
-    "mongodb-memory-server-core": "8.5.2",
+    "mongodb-memory-server-core": "8.6.0",
     "node-notifier": "10.0.1",
     "tracer": "1.1.5",
     "uuid": "8.3.2"

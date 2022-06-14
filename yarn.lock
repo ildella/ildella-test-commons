@@ -1033,10 +1033,10 @@ avvio@^7.1.2:
     fastq "^1.6.1"
     queue-microtask "^1.1.2"
 
-aws-sdk@2.1152.0:
-  version "2.1152.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1152.0.tgz#73e4fb81b3a9c289234b5d6848bcdb854f169bdf"
-  integrity sha512-Lqwk0bDhm3vzpYb3AAM9VgGHeDpbB8+o7UJnP9R+CO23kJfi/XRpKihAcbyKDD/AUQ+O1LJaUVpvaJYLS9Am7w==
+aws-sdk@2.1154.0:
+  version "2.1154.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1154.0.tgz#94c9406aeb69b7320a16714eb4958a9569cbb7f4"
+  integrity sha512-SIxLcWGsnW9Sl2P+a+uoqebBsfjeAZZOQokzgDj3VoESnFzsjI+2REi9CdvvSvwlfFUP7sFr6A0khrYNDJLebQ==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1422,10 +1422,10 @@ dateformat@4.5.1:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-4.5.1.tgz#c20e7a9ca77d147906b6dc2261a8be0a5bd2173c"
   integrity sha512-OD0TZ+B7yP7ZgpJf5K2DIbj3FZvFvxgFUuaqA/V5zTjAtAAXZ1E8bktHxmAGs4x5b7PflqA9LeQ84Og7wYtF7Q==
 
-dayjs@1.11.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.2.tgz#fa0f5223ef0d6724b3d8327134890cfe3d72fbe5"
-  integrity sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==
+dayjs@1.11.3:
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.3.tgz#4754eb694a624057b9ad2224b67b15d552589258"
+  integrity sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==
 
 debug@4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
@@ -1635,10 +1635,10 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-node-opinionated@0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-node-opinionated/-/eslint-config-node-opinionated-0.6.1.tgz#4da951c216b8df92342562a63e57a23d3acf75b7"
-  integrity sha512-5J06lhjwx/1vjn6ZnrBx2YcjqfA0Er1aLQiikqBRxI+TLEGOAbFSk49Pd4G4oJg6ramAxAJ0Cij1LEuL4nez0Q==
+eslint-config-node-opinionated@0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-opinionated/-/eslint-config-node-opinionated-0.6.3.tgz#5cdc1507fdd9721d57ff0aca616d9250c208d3a6"
+  integrity sha512-VLwhPhvhrqEVR2oOvkIGHX0oO5fMKJP+om9k3XXCPcoxUSF2TgfXFPVQFX9mEm1epVB59AdNJ6xGPPKT5pF7rQ==
 
 eslint-plugin-es@^3.0.0:
   version "3.0.1"

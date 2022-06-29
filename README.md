@@ -1,8 +1,37 @@
 # README
 
-Examples and some common code for **integration tests** with different technologies, working together in a single projects.
+In this project I have a few key objectives: 
 
-## More commons Docs
+  * Having **integration tests** for different target technologies, working niceley together in a single project.
+  * Some common code for tests and intgrations tests
+  * A single dependency I can bring in a new project that will import all I need for linting and testing code. 
+  
+The linting part is mostly done in a [separate effort](https://github.com/ildella/eslint-config-node-opinionated) that can be used as a standalone lint config.
+
+Those three main objectives could be split up in more projects of couse but for now having one for the lint config and one more for the rest is enough to support and provide decent separation. 
+
+Oh: all of this works for Node.js project, in *Javascript*.
+
+## Single Dependency
+
+```shell
+npm install ildella-test-commons
+# Or...
+yarn add ildella-test-commons
+```
+
+Or one can use this [template project](https://github.com/ildella/ildella-nodejs-template/) straight away. 
+
+If you do not want to use my template project, which is reasonable, here's how to configure yours from scratchers
+  
+  * A sample [eslint.rc](https://github.com/ildella/ildella-nodejs-template/blob/master/.eslintrc.js)
+  * A sample [jest.config.js](https://github.com/ildella/ildella-nodejs-template/blob/master/jest.config.js)
+
+## Integration Tests
+
+TBD...
+
+## Some more stuff...
 
 #### NPM company registry config
 

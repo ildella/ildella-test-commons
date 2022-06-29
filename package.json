@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ildella/ildella-test-commons#readme",
   "main": "src/index",
   "scripts": {
+    "ci.open": "circleci open",
     "ci.validate": "circleci config validate",
     "ci.process": "circleci config process .circleci/config.yml > process.yml",
     "ci.execute": "circleci local execute --job test",
@@ -33,7 +34,7 @@
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "aws-sdk": "2.1154.0",
+    "aws-sdk": "2.1164.0",
     "axios": "0.27.2",
     "dayjs": "1.11.3",
     "depcheck": "1.4.3",
@@ -51,7 +52,7 @@
     "jest-dynalite": "3.6.0",
     "kinesalite": "3.3.3",
     "mongodb": "4.7.0",
-    "mongodb-memory-server-core": "8.6.1",
+    "mongodb-memory-server-core": "8.7.1",
     "node-notifier": "10.0.1",
     "tracer": "1.1.5",
     "uuid": "8.3.2"

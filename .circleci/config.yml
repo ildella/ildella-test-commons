@@ -40,7 +40,7 @@ jobs:
   coverage:  
     docker:
       - image: cimg/node:14.19
-      - image: circleci/mongo:5.0.6-ram
+      - image: circleci/mongo:5.0.8-ram
     steps:
       - checkout
       - node/install-packages:

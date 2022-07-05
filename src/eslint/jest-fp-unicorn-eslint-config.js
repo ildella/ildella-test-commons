@@ -36,6 +36,7 @@ module.exports = {
         'unicorn/no-array-callback-reference': 'off', // does not sounds right to me
         'unicorn/no-fn-reference-in-iterator': 'off', // does not sounds right to me
         'unicorn/no-process-exit': 'off', // eslint already has it
+        'unicorn/prefer-node-protocol': 'off',
       },
     },
     {

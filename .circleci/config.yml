@@ -4,7 +4,6 @@ version: 2.1
 orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@5.0.2
-  # slack: circleci/slack@4.10.1
 
 jobs:
   lint:
@@ -71,19 +70,15 @@ workflows:
   check-and-build: 
     jobs:
       - lint
-      # - audit
+      - audit
       - tests
-      # - tests:
-          # context: AWS
       - coverage:
-          # context: AWS
           requires:
            - tests
       - publish:
-          # context: AWS
           requires:
            - lint
-           # - audit
+           - audit
            - tests
            # - coverage
           filters:

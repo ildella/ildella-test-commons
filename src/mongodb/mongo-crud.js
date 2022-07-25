@@ -7,6 +7,7 @@ module.exports = coll => {
     const result = await coll.updateOne({id: document.id}, {$set: document})
     return result.result
   }
+  // eslint-disable-next-line fp/no-mutating-methods
   const list = () => coll.find({}, {}).skip(0).limit(20).sort({id: -1}).toArray()
 
   return {

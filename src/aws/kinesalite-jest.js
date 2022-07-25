@@ -21,7 +21,7 @@ const createStream = ({StreamName, port}, done) => {
     ShardCount: 1,
   }, (error, data) => {
     if (error) return done(error)
-    // console.log(`Stream ${StreamName} created -->`, data)
+    console.log(`Stream ${StreamName} created -->`, data)
     done()
   })
 }

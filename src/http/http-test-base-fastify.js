@@ -1,13 +1,22 @@
 const axios = require('axios')
 
 module.exports = app => ({
-  start: () => app.listen(0, '0.0.0.0'),
+  start: () => app.listen({
+    port: 0,
+    host: '0.0.0.0',
+  }),
   stop: () => app.close(),
-  client: () => {
+  client: ({headers = {}} = {}) => {
     const {address, port} = app.server.address()
     return axios.create({
       baseURL: `http://${address}:${port}`,
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'accept': 'application/json',
+        'accept-encoding': 'gzip, deflate',
+        ...headers,
+        // 'connection': 'keep-alive',
+      },
     })
   },
 })

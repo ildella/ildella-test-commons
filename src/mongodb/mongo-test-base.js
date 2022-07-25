@@ -15,7 +15,7 @@ module.exports = () => ({
   start: async () => {
     if (!isCi) {
       // console.log('existing server:', server())
-      const newServer = server() ? server() : await MongoMemoryServer.create()
+      const newServer = server() || await MongoMemoryServer.create()
       // console.log({newServer})
       mongoServers.push(newServer)
     }

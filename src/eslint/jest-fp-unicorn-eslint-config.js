@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'node-opinionated',
+    'node-moar',
   ],
   plugins: [
     'jest',

@@ -1,6 +1,6 @@
 {
   "name": "ildella-test-commons",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
   "engines": {
     "node": ">=14.18"
@@ -34,7 +34,7 @@
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "aws-sdk": "2.1181.0",
+    "aws-sdk": "2.1191.0",
     "axios": "0.27.2",
     "dayjs": "1.11.4",
     "depcheck": "1.4.3",

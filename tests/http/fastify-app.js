@@ -10,8 +10,26 @@ const onRequest = (request, reply, next) => {
   next()
 }
 
-module.exports = ({logLevel = 'debug'} = {}) => {
-  const instance = fastify({logger: {level: logLevel || 'warn'}})
+const logger = ({stream, level}) => ({
+  stream,
+  redact: ['req.headers.authorization'],
+  level,
+})
+
+module.exports = ({
+  logLevel = 'debug',
+  // https,
+} = {}) => {
+  // const stream = createWriteStream(`${tmpdir}/custom.http.log`)
+  // const {key, cert} = https
+  const instance = fastify({
+    logger: logger({
+      // stream,
+      level: logLevel,
+    }),
+    // http2: true,
+    // https: {allowHTTP1: true, key, cert},
+  })
   instance.addHook('onRequest', onRequest)
   return instance
 }

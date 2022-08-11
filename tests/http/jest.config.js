@@ -1,1 +1,6 @@
-module.exports = {}
+module.exports = {
+  setupFilesAfterEnv: [
+    '../timeout-quick',
+    './setup-http',
+  ],
+}

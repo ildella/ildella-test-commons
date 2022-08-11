@@ -1,1 +1,6 @@
-module.exports = ({framework = 'fastify'} = {}) => require(`./http-test-base-${framework}`)
+const supportedFrameworks = {
+  fastify: () => require('./http-test-base-fastify'),
+  express: () => require('./http-test-base-express'),
+}
+
+module.exports = ({framework = 'fastify'} = {}) => supportedFrameworks[framework]()

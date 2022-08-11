@@ -57,6 +57,7 @@ module.exports = {
         'no-sync': 'off',
         'jest/expect-expect': 'off',
         'jest/no-done-callback': 'off',
+        'jest/no-conditional-expect': 'off',
         'node/no-unpublished-require': 'off',
         'node/no-extraneous-require': 'off',
         'promise/no-callback-in-promise': 'off',

@@ -11,6 +11,6 @@ module.exports = {
     '<rootDir>/tests/dynamodb',
     '<rootDir>/tests/kinesis', // not working in CI
     '<rootDir>/tests/http',
-    '<rootDir>/tests/mongodb',
+    // '<rootDir>/tests/mongodb',
   ],
 }

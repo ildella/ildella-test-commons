@@ -1,6 +1,6 @@
 {
   "name": "ildella-test-commons",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "license": "MIT",
   "engines": {
     "node": ">=14.18"
@@ -24,7 +24,7 @@
     "ci.process": "circleci config process .circleci/config.yml > process.yml",
     "ci.execute": "circleci local execute --job test",
     "cloc": "find src -name '*.js' | xargs wc -l",
-    "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --failOnViolation false > cpd.report",
+    "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --fail-on-violation false > cpd.report",
     "depcheck": "depcheck",
     "lint": "eslint . --max-warnings 5",
     "lint.print": "eslint --print-config src/config.js >> eslint-config.js",

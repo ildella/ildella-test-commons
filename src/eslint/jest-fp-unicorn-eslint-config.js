@@ -45,7 +45,7 @@ module.exports = {
         '**/tests/**',
         '**/fixtures/**',
         '.eslintrc.js',
-        'jest.config.js',
+        'jest.config.*.js',
       ],
       extends: [
         'plugin:jest/recommended',

@@ -1732,10 +1732,20 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-node-moar@0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-node-moar/-/eslint-config-node-moar-0.7.2.tgz#f39f41cbf459655f37312f722dc06c24dfe5a27e"
-  integrity sha512-q8I3exfCEuJoYyATnFeIIIcVg78h40P2vnwH2VLbKXRJ+3lJdb1Wd53/vmTnU5pI/Q+0B9Ka0VGNLVkhJWAlnQ==
+eslint-config-node-moar-stricter@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-moar-stricter/-/eslint-config-node-moar-stricter-0.1.0.tgz#9f23b608f102a3d98850ba5b4058d7fee9eda609"
+  integrity sha512-3BV0RDpRQ6cTIJENz4KPWzucLaHRTMIAFFE2lZhk6k8/wDTI/7HS+1CEb+91f4d92ZQbLs9T0Fdr8BrqGBPeFg==
+
+eslint-config-node-moar-test@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-moar-test/-/eslint-config-node-moar-test-0.1.0.tgz#c17f9860724becdfeb005bb525c8c48bbe93a22b"
+  integrity sha512-Y/lcQrnqYp9ivFZiDgVVuQPg7Zb1768ZKclRhBU6v3RWYnNGUSMd1H8cDUG+0El1zRvy7m72Tv2pQdwg9LkmSw==
+
+eslint-config-node-moar@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-moar/-/eslint-config-node-moar-0.8.1.tgz#9ef67423cca35e7fb9c8de38cde6f60f35b41cf6"
+  integrity sha512-piamh5ULamlJ44bDS06pm+mPB95Sy7u3dZQNRMireD7Vu22hVfjEEvwXjm4Dt/5qX9wjAQ01nI/9nq3nJB8xXQ==
 
 eslint-plugin-es@^3.0.0:
   version "3.0.1"

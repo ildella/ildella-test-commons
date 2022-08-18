@@ -1,4 +1,5 @@
-const createCollection = (database, name, jsonSchema) => database.createCollection(name, {validator: {$jsonSchema: jsonSchema}})
+const createCollection = (database, name, jsonSchema) =>
+  database.createCollection(name, {validator: {$jsonSchema: jsonSchema}})
 
 const tenantDatabase = activeConnection => activeConnection.db('tenantId')
 

@@ -19,9 +19,10 @@ const createStream = ({StreamName, port}, done) => {
   kinesis(port).createStream({
     StreamName,
     ShardCount: 1,
-  }, (error, data) => {
+    // data is available as second parameter
+  }, error => {
     if (error) return done(error)
-    console.log(`Stream ${StreamName} created -->`, data)
+    // console.log(`Stream ${StreamName} created -->`, data)
     done()
   })
 }

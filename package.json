@@ -60,7 +60,7 @@
     "uuid": "8.3.2"
   },
   "devDependencies": {
-    "fastify": "4.5.1",
+    "fastify": "4.8.1",
     "find-versions-cli": "4.0.0"
   }
 }

@@ -44,6 +44,14 @@ npm config set @${company}:registry https://registry.npmjs.org
 npm config set //registry.npmjs.org/:_authToken $token
 ```
 
+To publish to Github registry, other than using the straightforward GitHub action workflow, one must also set this in `package.json`:
+
+```json
+  "publishConfig": {
+    "@${company}:registry": "https://npm.pkg.github.com/"
+  },
+```
+
 #### CircleCI and GitHub configuration
 
 We need to authorize CircleCI to write to the GitHub repository inorder to update versioning in the `package.json` when `yarn publish` has done it's job. 

@@ -62,6 +62,7 @@
   "peerDependencies": {
     "aws-sdk": "^2",
     "fastify": "^4",
+    "highland": "^2",
     "jest-dynalite": "^3",
     "kinesalite": "^3",
     "mongodb": "^4",

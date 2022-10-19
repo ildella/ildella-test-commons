@@ -9,8 +9,8 @@ module.exports = {
   ...preset,
   projects: [
     '<rootDir>/tests/dynamodb',
-    '<rootDir>/tests/kinesis', // not working in CI
+    // '<rootDir>/tests/kinesis', // not working in CI
     '<rootDir>/tests/http',
-    // '<rootDir>/tests/mongodb',
+    // '<rootDir>/tests/mongodb', // not working with Ubuntu 22.04
   ],
 }

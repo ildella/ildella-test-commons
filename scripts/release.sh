@@ -1,12 +1,7 @@
 #!/bin/bash
 
-set -euxo
+set -euxo pipefail
 
-version=$(cat "package.json" | jq -r .version)
-echo releasing "v$version..."
-
-git tag "v$version"
-git push origin "v$version"
-# https://cli.github.com/manual/gh_release_create
-gh release create "v$version"
-npm publish
+version=$(< "package.json" jq -r .version)
+tag=v$version
+gh release create "$tag"

@@ -9,20 +9,16 @@
     "type": "git",
     "url": "git+https://github.com/ildella/ildella-test-commons.git"
   },
-  "author": {
-    "name": "Daniele Dellafiore",
-    "email": "daniele@dellafiore.net"
-  },
   "bugs": {
     "url": "https://github.com/ildella/ildella-test-commons/issues"
   },
   "homepage": "https://github.com/ildella/ildella-test-commons#readme",
+  "author": {
+    "name": "Daniele Dellafiore",
+    "email": "daniele@dellafiore.net"
+  },
   "main": "src/index",
   "scripts": {
-    "ci.open": "circleci open",
-    "ci.validate": "circleci config validate",
-    "ci.process": "circleci config process .circleci/config.yml > process.yml",
-    "ci.execute": "circleci local execute --job test",
     "cloc": "find src -name '*.js' | xargs wc -l",
     "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --fail-on-violation false > cpd.report",
     "depcheck": "depcheck",

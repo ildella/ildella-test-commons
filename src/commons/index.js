@@ -1,7 +1,6 @@
-const logger = require('./logger')
-const dayjs = require('./dayjs')
-
 module.exports = {
-  logger,
-  dayjs,
+  dayjs: () => require('./dayjs'),
+  httpJsonClient: () => require('./http-json-client'),
+  javascriptUtils: () => require('./javascript-utils'),
+  logger: () => require('./logger'),
 }

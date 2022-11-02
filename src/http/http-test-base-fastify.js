@@ -1,4 +1,4 @@
-const axios = require('axios')
+const httpJsonClient = require('../commons/http-json-client')
 
 module.exports = app => ({
   start: () => app.listen({
@@ -8,16 +8,8 @@ module.exports = app => ({
   stop: () => app.close(),
   client: ({headers = {}} = {}) => {
     const {address, port} = app.server.address()
-    return axios.create({
-      baseURL: `http://${address}:${port}`,
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'accept': 'application/json',
-        'accept-encoding': 'gzip, deflate',
-        ...headers,
-        // 'connection': 'keep-alive',
-      },
-    })
+    const client = httpJsonClient({baseURL: `http://${address}:${port}`})
+    return client(headers)
   },
   address: () => app.server.address(),
 })

@@ -1,4 +1,4 @@
-const httpTestBase = require('../../src/http/http-test-base')
+const httpTestBase = require('../../src/http')
 const fastifyApp = require('./fastify-app')
 const routes = require('./routes')
 

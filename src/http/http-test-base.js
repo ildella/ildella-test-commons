@@ -1,4 +1,4 @@
-const toMap = json => new Map(Object.entries(json))
+const {toMap} = require('../commons/javascript-utils')
 
 const supportedFrameworks = toMap({
   fastify: () => require('./http-test-base-fastify'),

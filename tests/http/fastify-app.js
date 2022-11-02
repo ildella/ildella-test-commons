@@ -17,7 +17,7 @@ const logger = ({stream, level}) => ({
 })
 
 module.exports = ({
-  logLevel = 'debug',
+  logLevel = 'warn',
   // https,
 } = {}) => {
   // const stream = createWriteStream(`${tmpdir}/custom.http.log`)

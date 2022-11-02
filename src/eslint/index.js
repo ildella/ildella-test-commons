@@ -1,3 +1,1 @@
-const jestFpUnicornEslintConfig = require('./jest-fp-unicorn-eslint-config')
-
-module.exports = {jestFpUnicornEslintConfig}
+module.exports = {jestFpUnicornEslintConfig: () => require('./jest-fp-unicorn-eslint-config')}

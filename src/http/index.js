@@ -1,3 +1,1 @@
-const httpTestBase = require('./http-test-base')
-
-module.exports = {httpTestBase}
+module.exports = {httpTestBase: () => require('./http-test-base')}

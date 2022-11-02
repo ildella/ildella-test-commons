@@ -1,10 +1,7 @@
-const eslintConfigs = require('./eslint')
-const jestCommons = require('./jest')
-
 module.exports = {
-  aws: () => require('./aws'),
-  commons: () => require('./commons'),
-  eslintConfigs,
-  http: () => require('./http'),
-  jestCommons,
+  aws: require('./aws'),
+  commons: require('./commons'),
+  eslintConfigs: require('./eslint'),
+  http: require('./http'),
+  jestCommons: require('./jest'),
 }

@@ -1,9 +1,5 @@
-const awsInit = require('./aws-init')
-const kinesaliteJest = require('./kinesalite-jest')
-const awsSsmUtils = require('./aws-ssm-utils')
-
 module.exports = {
-  awsInit,
-  awsSsmUtils,
-  kinesaliteJest,
+  awsInit: () => require('./aws-init'),
+  awsSsmUtils: () => require('./kinesalite-jest'),
+  kinesaliteJest: () => require('./aws-ssm-utils'),
 }

@@ -1,1 +1,1 @@
-module.exports = {jestPreset: () => require('./jest.preset')}
+module.exports = {preset: () => require('./jest.preset')}

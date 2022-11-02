@@ -3,5 +3,5 @@ module.exports = {
   commons: require('./commons'),
   eslintConfigs: require('./eslint'),
   http: require('./http'),
-  jestCommons: require('./jest'),
+  jest: require('./jest'),
 }

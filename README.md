@@ -1,5 +1,9 @@
 # README
 
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/npm/v/ildella-test-commons.svg?style=flat-square)](https://npmjs.com/package/ildella-test-commons)
+[![Build Status](https://github.com/ildella/ildella-test-commons/actions/workflows/main.yaml/badge.svg)](https://github.com/ildella/ildella-test-commons/actions)
+
 In this project I have a few key objectives: 
 
   * Having **integration tests** for different target technologies, working niceley together in a single project.

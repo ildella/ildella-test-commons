@@ -8,10 +8,10 @@ const {readJson} = require('../../src/commons/javascript-utils')
 test('stringify3', async () => {
   const filename = '.stringify3.output.json'
   const output = fs.createWriteStream(filename)
-  __([{a: 1}, {b: 'ciao'}, {c: 'hello again'}])
+  __([{a: 1}, {b: 'nice'}, {c: true}])
     .through(stringify3())
     .pipe(output)
   await finished(output)
   const json = await readJson(filename)
-  expect(json).toEqual([{a: 1}, {a: 1}, {b: 'ciao'}, {c: 'hello again'}])
+  expect(json).toEqual([{a: 1}, {a: 1}, {b: 'nice'}, {c: true}])
 })

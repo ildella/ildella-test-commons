@@ -3,6 +3,10 @@
   All credits to @rvagg: https://github.com/rvagg/through2/blob/master/through2.js
 */
 
+/*
+  eslint-disable fp/no-mutation, fp/no-this, unicorn/no-null
+*/
+
 const {Transform} = require('stream')
 
 function inherits (fn, sup) {
@@ -29,7 +33,7 @@ function through3 (construct) {
 
     if (typeof transform !== 'function') {
       // noop
-      transform = (chunk, enc, cb) => cb(null, chunk)
+      transform = (chunk, enc, callback) => callback(null, chunk)
     }
 
     if (typeof flush !== 'function') {

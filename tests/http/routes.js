@@ -14,7 +14,7 @@ module.exports = app => {
     // eslint-disable-next-line fp/no-throw
     throw new Error('big booom')
   })
-  app.get('/booom', request => {
+  app.get('/booom', () => {
     // console.log(request.headers)
     // eslint-disable-next-line fp/no-throw
     throw new Error('big booom')

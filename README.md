@@ -26,7 +26,7 @@ npm install ildella-test-commons
 
 Or one can use this [template project](https://github.com/ildella/ildella-nodejs-template/) straight away. 
 
-If you do not want to use my template project, which is reasonable, here's how to configure yours from scratchers
+If you do not want to use my template project, which is reasonable, here's how to configure yours from scratch.
   
   * A sample [eslint.rc](./.eslintrc.js)
   * A sample [jest.config.js](./jest.config.js)

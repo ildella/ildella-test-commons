@@ -8,7 +8,7 @@ In this project I have a few key objectives:
 
   * A single dependency I can bring in a new project that will import all I need for linting and testing code. 
   * A project structure to mix up fast **unit** and **integration** and **functional tests** that can target different technologies and working niceley together, in a single project.
-  * Common code for testing stuff, like an embedded http server with it's client, a properly configure http-json client and more.
+  * Common code for testing stuff, like an embedded http server with its client, a properly configured http-json client and more.
   
 The linting part is mostly done in a [separate effort](https://github.com/ildella/eslint-config-node-opinionated) that can be used as standalone `eslint-config`.
 

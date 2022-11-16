@@ -6,15 +6,13 @@
 
 In this project I have a few key objectives: 
 
-  * Having **integration tests** for different target technologies, working niceley together in a single project.
-  * Some common code for tests and intgrations tests
   * A single dependency I can bring in a new project that will import all I need for linting and testing code. 
+  * A project structure to mix up fast **unit** and **integration** and **functional tests** that can target different technologies and working niceley together, in a single project.
+  * Common code for testing stuff, like an embedded http server with it's client, a properly configure http-json client and more.
   
-The linting part is mostly done in a [separate effort](https://github.com/ildella/eslint-config-node-opinionated) that can be used as a standalone lint config.
+The linting part is mostly done in a [separate effort](https://github.com/ildella/eslint-config-node-opinionated) that can be used as standalone `eslint-config`.
 
-Those three main objectives could be split up in more projects of couse but for now having one for the lint config and one more for the rest is enough to support and provide decent separation. 
-
-Oh: all of this works for Node.js projects, in *JavaScript*.
+All of this works for Node.js projects, in pure **JavaScript**.
 
 ## Single Dependency
 
@@ -24,9 +22,9 @@ yarn add ildella-test-commons
 npm install ildella-test-commons
 ```
 
-Or one can use this [template project](https://github.com/ildella/ildella-nodejs-template/) straight away. 
+You can use this [template project](https://github.com/ildella/ildella-nodejs-template/) straight away.
 
-If you do not want to use my template project, which is reasonable, here's how to configure yours from scratch.
+If you do not want to use my template project, here's how to configure yours from scratch.
   
-  * A sample [eslint.rc](./.eslintrc.js)
+  * A minimal [.eslintrc.js](./.eslintrc.js) config or even better you can create your own `.eslintrc.js` with the exact content of [this file](src/eslint/jest-fp-unicorn-eslint-config.js)
   * A sample [jest.config.js](./jest.config.js)

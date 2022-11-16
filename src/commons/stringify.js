@@ -1,15 +1,15 @@
 const through3 = require('./through3')
 
-const asArray = {
-  open: '[\n',
-  separator: ',\n',
-  close: ']\n',
-}
-const asObjectsSequence = {
-  open: '',
-  separator: '\n',
-  close: '',
-}
+// const asArray = {
+//   open: '[\n',
+//   separator: ',\n',
+//   close: ']\n',
+// }
+// const asObjectsSequence = {
+//   open: '',
+//   separator: '\n',
+//   close: '',
+// }
 
 /*
   eslint-disable fp/no-mutation, fp/no-mutating-methods, fp/no-this, fp/no-let, unicorn/no-null

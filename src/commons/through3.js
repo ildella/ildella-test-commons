@@ -9,11 +9,11 @@
 
 const {Transform} = require('stream')
 
-function inherits (fn, sup) {
-  fn.super_ = sup
-  fn.prototype = Object.create(sup.prototype, {
+function inherits (parent, transform) {
+  parent.super_ = transform
+  parent.prototype = Object.create(transform.prototype, {
     constructor: {
-      value: fn,
+      value: parent,
       enumerable: false,
       writable: true,
       configurable: true,
@@ -80,7 +80,7 @@ const ctor = through3((options, transform, flush) => {
   return Through3
 })
 
-const obj = through3((options, transform, flush) => {
+const objectMode = through3((options, transform, flush) => {
   const t2 = new Transform(Object.assign({
     objectMode: true,
     highWaterMark: 16,
@@ -97,4 +97,4 @@ const obj = through3((options, transform, flush) => {
 
 module.exports = make
 module.exports.ctor = ctor
-module.exports.obj = obj
+module.exports.obj = objectMode

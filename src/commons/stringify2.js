@@ -1,3 +1,7 @@
+/*
+  eslint-disable fp/no-mutation, fp/no-mutating-methods, fp/no-this, fp/no-let, unicorn/no-null
+*/
+
 const through2 = require('through2')
 
 const open = '[\n'
@@ -13,12 +17,12 @@ const stringify2 = (space = 0) => {
       first = false
       this.push(`${separator}${string}`)
       callback()
-    } catch (err) {
-      callback(err, chunk)
+    } catch (error) {
+      callback(error, chunk)
     }
-  }, function (cb) {
+  }, function (callback) {
     this.push(close)
-    cb()
+    callback()
   })
 }
 

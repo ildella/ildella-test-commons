@@ -51,7 +51,7 @@
     "aws-sdk": "2.1245.0",
     "dayjs": "1.11.6",
     "exstream.js": "0.22.0",
-    "fastify": "4.10.0",
+    "fastify": "4.10.2",
     "find-versions-cli": "4.0.0",
     "highland": "2.13.5",
     "jest-dynalite": "3.6.1",

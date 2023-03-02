@@ -1,6 +1,6 @@
 {
   "name": "ildella-test-commons",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "license": "MIT",
   "engines": {
     "node": ">=16.10"

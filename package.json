@@ -1,6 +1,6 @@
 {
   "name": "ildella-test-commons",
-  "version": "0.9.14",
+  "version": "0.9.15",
   "license": "MIT",
   "engines": {
     "node": ">=16.10"
@@ -44,7 +44,6 @@
     "eslint-plugin-sonarjs": "0.18.0",
     "eslint-plugin-unicorn": "45.0.2",
     "jest": "29.4.3",
-    "json5": "2.2.3",
     "node-notifier": "10.0.1",
     "through2": "4.0.2"
   },
@@ -56,6 +55,7 @@
     "find-versions-cli": "4.0.0",
     "highland": "2.13.5",
     "jest-dynalite": "3.6.1",
+    "json5": "2.2.3",
     "kinesalite": "3.3.3",
     "mongodb": "5.1.0",
     "mongodb-memory-server-core": "8.11.5",
@@ -72,5 +72,11 @@
     "mongodb": "^4",
     "mongodb-memory-server-core": "^8",
     "tracer": "^1"
+  },
+  "overrides": {
+    "json5": "2.2.3"
+  },
+  "resolutions": {
+    "json5": "2.2.3"
   }
 }

@@ -47,7 +47,7 @@
     "through2": "4.0.2"
   },
   "devDependencies": {
-    "aws-sdk": "2.1245.0",
+    "aws-sdk": "2.1360.0",
     "dayjs": "1.11.7",
     "exstream.js": "0.22.0",
     "fastify": "4.15.0",

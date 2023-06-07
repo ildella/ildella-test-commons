@@ -4,6 +4,8 @@
 [![Version](https://img.shields.io/npm/v/ildella-test-commons.svg?style=flat-square)](https://npmjs.com/package/ildella-test-commons)
 [![Build](https://github.com/ildella/ildella-test-commons/actions/workflows/build.yml/badge.svg)](https://github.com/ildella/ildella-test-commons/actions)
 
+**DEPRACETED. Please use the drop-in replacement: [moar-js-dev](https://github.com/ildella/moar-js-dev)**
+
 In this project I have a few key objectives: 
 
   * A single dependency I can bring in a new project that will import all I need for linting and testing code. 

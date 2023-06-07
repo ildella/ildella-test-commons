@@ -22,5 +22,5 @@ module.exports = {
   },
   coverageReporters: ['text', 'text-summary', 'json', 'json-summary', 'lcov', 'clover', 'html'],
   verbose: true,
-  setupFilesAfterEnv: ['./tests/timeout-quick'],
+  setupFilesAfterEnv: ['./tests/timeout-fast'],
 }

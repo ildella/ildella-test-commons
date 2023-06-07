@@ -1,6 +1,6 @@
 /*
   Taken from through2 but using the core node:stream module to have no extra dependencies
-  All credits to @rvagg: https://github.com/rvagg/through2/blob/master/through2.js
+  Credits to @rvagg: https://github.com/rvagg/through2/blob/master/through2.js
 */
 
 /*
